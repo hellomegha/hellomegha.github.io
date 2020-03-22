@@ -13,9 +13,31 @@ function test() {
 	var spanElements = document.getElementsByTagName('span');
 	function printSpanSlowly(){
 		setTimeout(function () {   	
-	    	var spanElement = spanElements[i];    
-			spanElement.style.display="inline";  		        
-		    i++;                     
+
+			//lazy work
+			var spanElement = spanElements[i];
+            var spanElement1 = spanElements[i+1];
+            var spanElement2 = spanElements[i+2];
+            var spanElement3 = spanElements[i+3];
+            var spanElement4 = spanElements[i+4];
+            var spanElement5 = spanElements[i+5];
+            var spanElement6 = spanElements[i+6];
+            var spanElement7 = spanElements[i+7];
+            var spanElement8 = spanElements[i+8];
+            var spanElement9 = spanElements[i+9];
+
+			spanElement.style.display="inline";
+            spanElement1.style.display="inline";
+            spanElement2.style.display="inline";
+            spanElement3.style.display="inline";
+            spanElement4.style.display="inline";
+            spanElement5.style.display="inline";
+            spanElement6.style.display="inline";
+            spanElement7.style.display="inline";
+            spanElement8.style.display="inline";
+            spanElement9.style.display="inline";
+		    i+=10;                   
+
 		    if (i < spanElements.length) {            
 		         printSpanSlowly();             
 		    }                        
